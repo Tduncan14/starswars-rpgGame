@@ -52,6 +52,8 @@ $(document).ready(function(){
 
   var renderCharacter = function(character,renderArea){
 // this block of code builds the caracter card, and renders it to the page.
+  
+var charDiv = $("<div class ='character' data-name =")
 
   };
 
