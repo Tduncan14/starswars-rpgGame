@@ -10,6 +10,13 @@ $(document).ready(function(){
             name: "Obi-Wan kenobi",
             health: 200,
             attack:  5,
+            imageUrl:"assets/images/obi-wan.jpg",
+            enemyAttackBack: 15
+        },
+        "Luke Skywalker":{
+            name:"Luke Skywalker",
+            health: 120,
+            
         }
     }
 
