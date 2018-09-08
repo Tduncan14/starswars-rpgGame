@@ -119,6 +119,24 @@ $("#characters-section").on("click",".character", function(){
     // save the clicking for characters name
     
     var name =$(this).attr("data-name");
+    console.log(this);
+    // if a player has not been chosen yet information
+    if(!attacker){
+        // we populate attacker with the selected character's
+        attacker = characters[name];
+        for(var key in characters){
+            if(key !==name){
+                combatants.push(characters[key]);
+            }
+
+        }
+        ///////////
+        // hides the character select div.
+        $("#characters-section").hide();
+    // then render our selected character and opponents
+
+    }
 })
+////////////////////////////////////
 
 })
