@@ -113,4 +113,12 @@ var clearMessage = function(){
 };
 ///////////////////===
 
+// on  click event for selectiong our character.
+
+$("#characters-section").on("click",".character", function(){
+    // save the clicking for characters name
+    
+    var name =$(this).attr("data-name");
+})
+
 })
