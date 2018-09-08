@@ -91,7 +91,8 @@ var updateCharacter = function(charObj, areaRender){
      var newMessage =$("<div>").text(message);
      gameMessageSet.append(newMessage);
   };
+  // function which handles restarting the game victory or defeat
 
-  
+
 
 })
