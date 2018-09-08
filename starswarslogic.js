@@ -43,4 +43,6 @@ $(document).ready(function(){
     var defender;
  // Will keep track of turns during combat. Used for calculating player damage;
     var turnCounter = 1;
+    // keeps tracks of  opponents defeated
+    var killCount =0;
 })
