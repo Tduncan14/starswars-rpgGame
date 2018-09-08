@@ -37,5 +37,6 @@ $(document).ready(function(){
     };
    // when a character is selected this will be populated
    var attacker;
+   // populate the rest of characters that has not been selected as challengers to fight
 
 })
