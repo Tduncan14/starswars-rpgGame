@@ -179,7 +179,23 @@ if(defender.health >0 ){
 
     // reduce your health by the opponent's attack value/
     attacker.health -= defender.enemyAttackBack;
+    
+    // render the player's updated character card.
+
+    // render the players updated character
+    updateCharacter(attacker,"#selected-character");
+
+    // if you have less than zero health the game ends.
+    // we call the restartGame function to allow the user to restart the game and play game.
+
+if(attacker.health <=0) {
+   clearMessage();
+   restartGame("you have been defeated.. GAME OVER!!!");
+   $("#attack-button"),off("click");
 }
+ }
+ else{
+     
  }
     
  
