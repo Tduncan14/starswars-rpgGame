@@ -59,7 +59,39 @@ var charImage =$("<img alt ='image' class='character-image'>").attr("src",charac
 var charHealth =$("<div class ='character-health'>").text(character.health);
 charDiv.append(charName).append(charImage).append(charHealth);
  $(renderArea).append(charDiv);
-
   };
+  // this function will load all the characters into the character section to be selected.
+   var initializeGame = function(){
+       // loops through the characters object and call the renderCharacter function on each character to render their card.
+      for(var key in characters) {
+          renderCharacter(characters[key],"#characters-section");
+      }
+   } ;
+
+   // remember to run the function here
+   initializeGame();
+   // this function handles updating the selected player or the current defender. if there is no selected player/defender
+   // function will also place the character based  on the areaRender chosen(selected-character or defender);
+
+var updateCharacter = function(charObj, areaRender){
+    // first empty the area so that we can re-render the new object
+    $(areaRender).empty();
+    renderCharacter(charObj,areaRender);
+};
+// this function will render the available-ti-attack, this will run once after a character  has been selected
+ var renderEnemies = function(enemyArr){
+     for(var i = 0; i<enemyArr.length; i++){
+         renderCharacter(enemyArr[i],"#available-to-attack-section");
+     }
+ };
+  // function to  handle rendering game messages.
+  var renderMessage = function(message){
+      // builds the message and appends it to the the page.
+     var gameMessageSet = $("#game-message");
+     var newMessage =$("<div>").text(message);
+     gameMessageSet.append(newMessage);
+  };
+
+  
 
 })
