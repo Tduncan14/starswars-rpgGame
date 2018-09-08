@@ -17,7 +17,25 @@ $(document).ready(function(){
             name:"Luke Skywalker",
             health: 120,
             attack: 13,
+            imageUrl:"assets/images/luke-skywalker.jpg",
+            enemyAttackBack:7
+        },
+        "Darth Sidious":{
+            name: "Darth",
+            health: 130,
+            attack: 0,
+            imageUrl:"assets/images/darth",
+            enemyAttackBack:25
+        },
+        "Darth Maul":{
+            name: "Darth Maul",
+            health: 180,
+            attack: 25,
+            imageUrl:"assets/images/darth-maul.jpg",
+            enemyAttackBack:0
         }
-    }
+    };
+
+    
 
 })
