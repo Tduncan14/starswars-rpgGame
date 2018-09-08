@@ -94,7 +94,13 @@ var updateCharacter = function(charObj, areaRender){
   // function which handles restarting the game victory or defeat
 var restartGame = function(resultMessage){
     // When the 'restart" button is clicked, reload the page
-}
+    var restart =$("<button> Restart </button>").click(function(){
+        location.reload();
+    });
+
+    // builds the div that displays victories and defeats
+
+};
 
 
 })
