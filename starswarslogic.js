@@ -159,10 +159,27 @@ $("#available-to-attack-section").on("click",".character",function(){
 $("#attack-button").on("click",function(){
  // if there is a defender, combat will occur
 
- if($("#defender".children().length !== 0){
+ if($("#defender").children().length !== 0){
      // creates a message for our attack and our opponets counter attack
     var attackMessage = "You attacked" + defender.name + "for" + attacker.attack * turnCounter + "damage.";
     var counterAttackMessage = defender.name + "attacked you back for" + defender.enemyAttackBack + "damage";
+    clearMessage();
+
+    // reduce defender health by your attack value
+    defender.health -= attacker.attack * turnCounter;
+
+// if the enemy still has health
+
+if(defender.health >0 ){
+    // Render the enemy's updated character card.
+    updateCharacter(defender,"#defender");
+    // Render the combat messages
+    renderMessage(attackMessage);
+    renderMessage(counterAttackMessage);
+
+    // reduce your health by the opponent's attack value/
+    attacker.health -= defender.enemyAttackBack;
+}
  }
     
  
