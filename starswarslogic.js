@@ -55,6 +55,8 @@ $(document).ready(function(){
   
 var charDiv = $("<div class ='character' data-name ='"+ character.name + "'>");
 var charName = $("<div class = 'character-name'>").text(character.name);
+var charImage =$("<img alt ='image'>").attr("src",character.imageUrl);
+var charHealth =$("<div class ='character-health'>")
 
   };
 
