@@ -16,7 +16,7 @@ $(document).ready(function(){
         "Luke Skywalker":{
             name:"Luke Skywalker",
             health: 120,
-            
+            attack: 13,
         }
     }
 
