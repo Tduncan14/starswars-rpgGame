@@ -92,7 +92,9 @@ var updateCharacter = function(charObj, areaRender){
      gameMessageSet.append(newMessage);
   };
   // function which handles restarting the game victory or defeat
-
+var restartGame = function(resultMessage){
+    // When the 'restart" button is clicked, reload the page
+}
 
 
 })
