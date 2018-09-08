@@ -45,4 +45,14 @@ $(document).ready(function(){
     var turnCounter = 1;
     // keeps tracks of  opponents defeated
     var killCount =0;
+ // functions that makes the game run
+ //=================================================================================
+  // this function will render a character card to the page.
+  // the character rendered. and their status is deteremined by the arguement.
+
+  var renderCharacter = function(character,renderArea){
+// this block of code builds the caracter card, and renders it to the page.
+
+  };
+
 })
