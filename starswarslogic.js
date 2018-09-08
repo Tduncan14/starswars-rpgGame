@@ -37,6 +37,10 @@ $(document).ready(function(){
     };
    // when a character is selected this will be populated
    var attacker;
-   // populate the rest of characters that has not been selected as challengers to fight
-
+   // populate the rest of characters that has not being selected can be the challenger
+   var combatants = [];
+   // will be populate when the player chooses an opponent
+    var defender;
+ // Will keep track of turns during combat. Used for calculating player damage;
+    var turnCounter = 1;
 })
