@@ -134,9 +134,39 @@ $("#characters-section").on("click",".character", function(){
         // hides the character select div.
         $("#characters-section").hide();
     // then render our selected character and opponents
-
+      updateCharacter(attacker, "#selected-character");
+      renderEnemies(combatants);
     }
-})
+});
 ////////////////////////////////////
+// creates an event for each enemy.
+$("#available-to-attack-section").on("click",".character",function(){
+    // saving the opponent's name
+  var name = $(this).attr("data-name");
+
+  // if there is no defender, the clicked enemy will become the defender
+  if($("#defender").children().length ===0){
+      defender = characters[name];
+      updateCharacter(defender,"#defender");
+
+      //remove element as will now be a new defender
+      $(this).remove();
+      clearMessage();
+  }
+});
+// when you click the attack button, run the following game logic
+
+$("#attack-button").on("click",function(){
+ // if there is a defender, combat will occur
+
+ if($("#defender".children().length !== 0){
+     // creates a message for our attack and our opponets counter attack
+    var attackMessage = "You attacked" + defender.name + "for" + attacker.attack * turnCounter + "damage.";
+    var counterAttackMessage = defender.name + "attacked you back for" + defender.enemyAttackBack + "damage";
+ }
+    
+ 
+})
+
 
 })
