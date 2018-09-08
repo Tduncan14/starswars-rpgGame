@@ -35,7 +35,7 @@ $(document).ready(function(){
             enemyAttackBack:0
         }
     };
-
-    
+   // when a character is selected this will be populated
+   var attacker;
 
 })
