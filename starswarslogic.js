@@ -1,0 +1,1 @@
+// excute this code the dom has fully loaded
