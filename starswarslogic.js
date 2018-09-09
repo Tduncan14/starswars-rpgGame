@@ -10,28 +10,28 @@ $(document).ready(function(){
             name: "Obi-Wan kenobi",
             health: 200,
             attack:  5,
-            imageUrl:"assets/images/obi-wan.jpg",
+            imageUrl:"images/obi-wan.jpg",
             enemyAttackBack: 15
         },
         "Luke Skywalker":{
             name:"Luke Skywalker",
             health: 120,
             attack: 13,
-            imageUrl:"assets/images/luke-skywalker.jpg",
+            imageUrl:"images/luke-skywalker.jpg",
             enemyAttackBack:7
         },
         "Darth Sidious":{
             name: "Darth",
             health: 130,
             attack: 0,
-            imageUrl:"assets/images/darth",
+            imageUrl:"images/darth-sidious.png",
             enemyAttackBack:25
         },
         "Darth Maul":{
             name: "Darth Maul",
             health: 180,
             attack: 25,
-            imageUrl:"assets/images/darth-maul.jpg",
+            imageUrl:"images/darth-maul.jpg",
             enemyAttackBack:0
         }
     };
@@ -195,11 +195,29 @@ if(attacker.health <=0) {
 }
  }
  else{
-     
- }
-    
- 
-})
-
-
-})
+     // if the enemy has less than zero health they are defeated.
+     // remove your oppnent'
+     $("#defender").empty();
+     var gameStateMessage ="you have defeated" + defender.name +", you can choose to fight the enemy.";
+     renderMessage(gameStateMessage);
+   
+     // Increment your kill count.
+     killCount++;
+     // if you have killed all of your oppnents you win.
+     // call the restartGame function to allow the user to restgart the game and play.
+     if (killCount >= combatants.length) {
+        clearMessage();
+        $("#attack-button").off("click");
+        restartGame("You Won!!!! GAME OVER!!!");
+      }
+    }
+    // Increment turn counter. This is used for determining how much damage the player does.
+    turnCounter++;
+  }
+  else {
+    // If there is no defender, render an error message.
+    clearMessage();
+    renderMessage("No enemy here.");
+  }
+});
+});
